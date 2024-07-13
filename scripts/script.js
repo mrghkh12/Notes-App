@@ -36,5 +36,12 @@ notesContainer.addEventListener("click" , e => {
     }
 })
 
+$.addEventListener('keydown', e =>{
+    if(e.key === 'Enter'){
+        $.execCommand('insertLineBreak')
+        e.preventDefault()
+    }
+})
+
 createNoteBtn.addEventListener('click' , createNote)
 window.addEventListener('load' , loadNotes)
