@@ -10,7 +10,6 @@ const createNote = () =>{
     let delNoteElem = $.createElement('img')
     delNoteElem.setAttribute('src' , 'images/delete.png')
     delNoteElem.classList.add('del-icone')
-    delNoteElem.addEventListener('click' , delNote)
 
     notesContainer.appendChild(noteElem).appendChild(delNoteElem)
     saveNotes()
@@ -24,10 +23,12 @@ const loadNotes = () =>{
     notesContainer.innerHTML = localStorage.getItem('notes')
 }
 
-const delNote = e =>{
-    e.target.parentElement.remove()
-    saveNotes()
-}
+notesContainer.addEventListener("click" , e => {
+    if(e.target.tagName == 'IMG'){
+        e.target.parentElement.remove()
+        saveNotes()
+    }
+})
 
 createNoteBtn.addEventListener('click' , createNote)
 window.addEventListener('load' , loadNotes)
