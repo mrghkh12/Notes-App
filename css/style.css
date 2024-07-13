@@ -12,3 +12,36 @@
     padding-top: 4%;
     padding-left: 10%;
 }
+
+.container .title{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.container .title .icone{
+    width: 60px;
+}
+
+.container .createBtn{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd , #571094);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.container .createBtn:hover{
+    box-shadow:0 0 8px 1px #9418fd ;
+}
+.container .createBtn .icone{
+    width: 25px;
+    margin-right: 8px;
+
+}
