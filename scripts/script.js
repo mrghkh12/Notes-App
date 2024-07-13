@@ -12,5 +12,16 @@ const createNote = () =>{
     delNoteElem.classList.add('del-icone')
 
     notesContainer.appendChild(noteElem).appendChild(delNoteElem)
+    saveNotes()
 }
+
+const saveNotes = () =>{
+    localStorage.setItem('notes' , notesContainer.innerHTML)
+}
+
+const loadNotes = () =>{
+    notesContainer.innerHTML = localStorage.getItem('notes')
+}
+
 createNoteBtn.addEventListener('click' , createNote)
+window.addEventListener('load' , loadNotes)
