@@ -28,6 +28,12 @@ notesContainer.addEventListener("click" , e => {
         e.target.parentElement.remove()
         saveNotes()
     }
+    else if(e.target.tagName == 'P'){
+        let allNotes = $.querySelectorAll('.notesInput')
+        allNotes.forEach(note => {
+            note.addEventListener('keyup' , saveNotes)
+        })
+    }
 })
 
 createNoteBtn.addEventListener('click' , createNote)
