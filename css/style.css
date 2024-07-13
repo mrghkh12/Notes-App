@@ -9,8 +9,7 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #cf9aff, #95c0ff);
     color: #fff;
-    padding-top: 4%;
-    padding-left: 10%;
+    padding: 4% 10%;
 }
 
 .container .title{
